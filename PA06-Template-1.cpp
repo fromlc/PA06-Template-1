@@ -13,6 +13,8 @@
 //------------------------------------------------------------------------------
 // constants
 //------------------------------------------------------------------------------
+constexpr int NUM_ELEMENTS = 4;
+
 constexpr int RANDINT_LOW = 10;
 constexpr int RANDINT_HIGH = 20;
 constexpr char RANDCHAR_LOW = 'a';
@@ -31,7 +33,7 @@ int main()
     // seed random number generator
     srand(static_cast<unsigned int>(time(0)));
 
-    countOccurrences(10, 20, 4);
+    countOccurrences(RANDINT_LOW, RANDINT_HIGH, NUM_ELEMENTS);
 
     return 0;
 }
@@ -44,6 +46,7 @@ void countOccurrences(int low, int high, size_t nElements)
     // data vector with nElements elements all set to 0
     std::vector<int> vData(nElements, 0);
 
+    // range for random numbers is between low and high, inclusive
     int modBy = high + 1 - low;
 
     // fill data vector with random elements of type T between (low, high)
