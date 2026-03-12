@@ -35,6 +35,14 @@ int main()
 
     countOccurrences(RANDINT_LOW, RANDINT_HIGH, NUM_ELEMENTS);
 
+    // After you convert countOccurrences() to a template function,
+    // AND after you test the template function with the call above
+    // with type int,
+    // THEN uncomment this function call and test your template function
+    // with type char
+
+   //countOccurrences(RANDCHAR_LOW, RANDCHAR_HIGH, NUM_ELEMENTS);
+
     return 0;
 }
 
